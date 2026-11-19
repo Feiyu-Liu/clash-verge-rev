@@ -10,6 +10,16 @@
   },
   "sections": {
     "system": {
+      "networkGuard": {
+        "label": "断网保护",
+        "loading": "正在检查保护状态…",
+        "off": "已关闭",
+        "active": "保护服务运行中 · 虚拟网卡已就绪",
+        "blocking": "保护服务运行中 · 未检测到虚拟网卡",
+        "disable": "关闭保护",
+        "unverified": "暂时无法确认保护状态",
+        "unavailable": "系统保护服务不可用"
+      },
       "title": "系统设置",
       "toggles": {
         "tunMode": "虚拟网卡模式",

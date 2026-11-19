@@ -11,6 +11,16 @@
   "sections": {
     "system": {
       "title": "System Setting",
+      "networkGuard": {
+        "label": "Network Kill Switch",
+        "loading": "Checking protection status…",
+        "off": "Off",
+        "active": "Service active · TUN detected",
+        "blocking": "Service active · TUN not detected",
+        "disable": "Turn off",
+        "unverified": "Protection status could not be verified",
+        "unavailable": "System protection service unavailable"
+      },
       "toggles": {
         "tunMode": "Tun Mode",
         "systemProxy": "System Proxy"

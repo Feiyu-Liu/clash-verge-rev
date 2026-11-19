@@ -10,6 +10,16 @@
   },
   "sections": {
     "system": {
+      "networkGuard": {
+        "label": "斷網保護",
+        "loading": "正在檢查保護狀態…",
+        "off": "已關閉",
+        "active": "防護服務運作中 · 虛擬網卡已就緒",
+        "blocking": "防護服務運作中 · 未偵測到虛擬網卡",
+        "disable": "關閉保護",
+        "unverified": "暫時無法確認保護狀態",
+        "unavailable": "系統保護服務無法使用"
+      },
       "title": "系統設定",
       "toggles": {
         "tunMode": "虛擬網路介面卡模式",

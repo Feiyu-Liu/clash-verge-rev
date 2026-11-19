@@ -21,6 +21,10 @@ export const commands = {
   openCoreDir: () => __TAURI_INVOKE<null>('open_core_dir'),
   getNetworkInterfaces: () =>
     __TAURI_INVOKE<string[]>('get_network_interfaces'),
+  getNetworkGuardStatus: () =>
+    __TAURI_INVOKE<NetworkGuardStatus>('get_network_guard_status'),
+  setNetworkGuardEnabled: (enabled: boolean) =>
+    __TAURI_INVOKE<null>('set_network_guard_enabled', { enabled }),
   getSystemHostname: () => __TAURI_INVOKE<string>('get_system_hostname'),
   restartApp: () => __TAURI_INVOKE<null>('restart_app'),
   installUpdate: (
@@ -594,6 +598,13 @@ export type LocalBackupFile = {
   last_modified: string
   content_length: number
 }
+
+export type NetworkGuardStatus =
+  | 'unavailable'
+  | 'off'
+  | 'active'
+  | 'blocking'
+  | 'unverified'
 
 export type NetworkInterfaceView =
   | NetworkInterfaceView_Serialize

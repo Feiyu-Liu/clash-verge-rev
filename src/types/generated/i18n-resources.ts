@@ -1390,6 +1390,16 @@ export interface TranslationResources {
             autoLaunch: string
             silentStart: string
           }
+          networkGuard: {
+            active: string
+            blocking: string
+            disable: string
+            label: string
+            loading: string
+            off: string
+            unavailable: string
+            unverified: string
+          }
           notifications: {
             tunMode: {
               autoDisabled: string

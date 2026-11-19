@@ -5,8 +5,10 @@ import { useTranslation } from 'react-i18next'
 import { Switch, TooltipIcon } from '@/components/base'
 import ProxyControlSwitches from '@/components/shared/proxy-control-switches'
 import { useVerge } from '@/hooks/use-verge'
+import getSystem from '@/utils/get-system'
 
 import { GuardState } from './mods/guard-state'
+import { NetworkGuard } from './mods/network-guard'
 import { SettingList, SettingItem } from './mods/setting-comp'
 
 interface Props {
@@ -36,6 +38,7 @@ const SettingSystem = ({ onError }: Props) => {
           onError={onError}
         />
       </Box>
+      {getSystem() === 'macos' && <NetworkGuard />}
 
       <Box data-setting-target="settings.sections.system.toggles.systemProxy">
         <ProxyControlSwitches

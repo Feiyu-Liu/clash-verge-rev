@@ -34,6 +34,9 @@ export async function copyClashEnv() {
   return commands.copyClashEnv()
 }
 
+export const getNetworkGuardStatus = commands.getNetworkGuardStatus
+export const setNetworkGuardEnabled = commands.setNetworkGuardEnabled
+
 export async function getProfiles(): Promise<IProfilesConfig> {
   return commands.getProfiles()
 }
